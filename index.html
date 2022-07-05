@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript :: Comisión 37515 - Desafío 01</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header-container">
+            <h1 class="header-title">Desafío 01</h1>
+            <h2 class="header-subtitle">Crea un algoritmo utilizando un ciclo</h2>
+        </header>
+        <main class="main-container">
+            <section class="consigna-container">
+                <p class="consigna-abstract">Tomando como base los ejemplos 
+                anteriores de la estructura <span class="inline-code">for</span>, 
+                <span class="inline-code">while</span> y <span 
+                class="inline-code">do...while</span>, crear un algoritmo que 
+                repita un bloque de instrucciones.</p>
+
+                <dl class="consigna-format">
+                    <dt>Formato</dt>
+                    <dd>Página HTML y código fuente en JavaScript. Debe 
+                    identificar el apellido del alumno/a en el nombre del 
+                    archivo comprimido por "claseApellido".</dd>
+
+                    <dt>Sugerencia</dt>
+                    <dd>Usamos la instrucción <span class="inline-code">for</span>
+                    para repetir un número fijo de veces. Mientras que Usamos
+                    <span class="inline-code">while</span> cuando queremos
+                    repetir algo hasta que se deje de cumplir una condición.</dd>
+                </dl>
+
+                <dl class="consigna-content">
+                    <dt>Consigna</dt>
+                    <dd>Tomando como base los ejemplos anteriores de la estructura
+                    <span class="inline-code">for</span> y <span class="inline-code">while</span>,
+                    crear un algoritmo que repita un bloque de instrucciones. En
+                    cada repetición es necesario efectuar una operación o comparación
+                    para obtener una salida por alerta o consola.</dd>
+
+                    <dt>Aspectos a incluir en el entregable</dt>
+                    <dd>Archivo HTML y archivo JS, referenciado en el HTML por etiqueta
+                    <span class="inline-code">&lt;script src&equals;&quot;js/miarchivo.js&quot;&gt;&lt;/script&gt;</span>,
+                    que incluya la definición de un algoritmo en JavaScript que emplee 
+                    bucles e instrucciones condicionales.</dd>
+                </dl>
+            </section>
+
+            <section class="desafio-container">
+                <h3 class="instructions-title">Instrucciones</h3>
+                <p class="instructions-text">En este ejercicio se implementa un generador de
+                tablas de multiplicar. La amplitud y profundidad puede ser personalizada.</p>
+
+                <p class="instructions-text">La <strong>amplitud</strong> se refiere a 
+                ¿<strong>qué</strong> tablas se muestran? y puede ajustarse en cualquier rango 
+                que vaya desde -10 hasta 10, inclusive.</p>
+
+                <p class="instructions-text">La <strong>profundidad</strong> se refiere a
+                ¿<strong>cuántos</strong> términos tiene cada tabla y se puede ajustar desde
+                1 hasta 10, inclusive.</p>
+
+                <p class="instructions-text">Por ejemplo: si configuramos una <strong>amplitud</strong>
+                que va desde -2 hasta 1, <code>A = [-2, 1]</code>, y una <strong>profundidad</strong>
+                de 7, <code>P = 7</code>; al enviar el formulario se mostrarían las tablas desde 
+                <code>-5</code> hasta <code>5</code>, y cada tabla se multiplicaría desde el 
+                <code>0</code> hasta el <code>7</code>:</p>
+
+                <div class="example">
+                    <ul class="output-table">
+                        <li class="output-row">-2 &times; 0 = 0</li>
+                        <li class="output-row">-2 &times; 1 = -2</li>
+                        <li class="output-row">-2 &times; 2 = -4</li>
+                        <li class="output-row">...</li>
+                        <li class="output-row">-2 &times; 7 = -14</li>
+                    </ul>
+
+                    <ul class="output-table">
+                        <li class="output-row">-1 &times; 0 = 0</li>
+                        <li class="output-row">-1 &times; 1 = -1</li>
+                        <li class="output-row">-1 &times; 2 = -2</li>
+                        <li class="output-row">...</li>
+                        <li class="output-row">-1 &times; 7 = -7</li>
+                    </ul>
+
+                    <ul class="output-table">
+                        <li class="output-row">0 &times; 0 = 0</li>
+                        <li class="output-row">0 &times; 1 = 0</li>
+                        <li class="output-row">0 &times; 2 = 0</li>
+                        <li class="output-row">...</li>
+                        <li class="output-row">0 &times; 7 = 0</li>
+                    </ul>
+
+                    <ul class="output-table">
+                        <li class="output-row">1 &times; 0 = 0</li>
+                        <li class="output-row">1 &times; 1 = 1</li>
+                        <li class="output-row">1 &times; 2 = 2</li>
+                        <li class="output-row">...</li>
+                        <li class="output-row">1 &times; 7 = 7</li>
+                    </ul>
+                </div>
+                <div class="input-form-container">
+                    <form action="#" id="inputForm">
+                        <fieldset class="input-parameters" name="amplitud-rango">
+                            <legend>Amplitud</legend>
+                            <label for="rangoLimiteInferior">Límite inferior</label>
+                            <input type="number" name="rangoLimiteInferior" id="rangoLimiteInferior" min="-10" max="10" required>
+
+                            <label for="rangoLimiteSuperior">Límite superior</label>
+                            <input type="number" name="rangoLimiteSuperior" id="rangoLimiteSuperior" min="-10" max="10" required>
+                        </fieldset>
+
+                        <label for="profundidad">Profundidad</label>
+                        <input type="number" name="profundidad" id="profundidad" min="1" max="10" required>
+
+                        <input type="button" value="Generar Tablas" id="execButton">
+
+                        <input type="button" id="clearButton" value="Limpiar Tablas">
+                    </form>
+                </div>
+            </section>
+
+            <section id="outputContainer"></section>
+        </main>
+    </div>
+    <script src="js/desafio01.js"></script>
+</body>
+</html>

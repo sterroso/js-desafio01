@@ -1,0 +1,24 @@
+// Paleta de colores
+
+$colors: (
+    "black": #000000,
+    "white": #ffffff,
+    "cultured": #f3f3f4,
+    "foggy-white": #dae1e7,
+    "dessert-sand": #d9c5b2,
+    "light-teal": #00909e,
+    "deep-blue": #27496d,
+    "night-sky": #142850,
+    "flame": #e15634,
+    "seal-brown": #582707
+);
+
+$theme-colors: (
+    "background": map-get($map: $colors, $key: "foggy-white"),
+    "text-primary": map-get($map: $colors, $key: "black"),
+    "text-secondary": map-get($map: $colors, $key: "night-sky"),
+    "accent": map-get($map: $colors, $key: "light-teal"),
+    "shadows": map-get($map: $colors, $key: "desert-sand"),
+    "borders": map-get($map: $colors, $key: "seal-brown"),
+    "focus": map-get($map: $colors, $key: "flame")
+);

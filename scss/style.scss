@@ -1,0 +1,39 @@
+@use "utils/colors";
+@use "mixins/common";
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+
+* {
+    @include common.reset;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 1rem;
+    row-gap: 1.75rem;
+    background: map-get($map: colors.$theme-colors, $key: "background");
+    color: map-get($map: colors.$theme-colors, $key: "text-primary");
+
+    .header-container {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+    
+        .header-title {
+            border-bottom: thin solid map-get($map: colors.$theme-colors, $key: "borders");
+            font-family: 'Oxygen', sans-serif;
+            font-style: italic;
+        }
+
+        .header-subtitle {
+            font-family: 'Oxygen', sans-serif;
+            color: map-get($map: colors.$theme-colors, $key: "text-secondary")
+        }
+    }
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        margin: 0 1rem;
+    }
+}

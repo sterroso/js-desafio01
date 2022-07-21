@@ -159,7 +159,7 @@ const multiplicar = params => {
     }
 }
 
-function limpiarSalida() {
+const limpiarSalida = () => {
     // Primero verifica que la variable outputContainer apunte a un elemento válido en el documento.
     if(outputContainer) {
         // Borra todo el contenido del elemento outputContainer.
